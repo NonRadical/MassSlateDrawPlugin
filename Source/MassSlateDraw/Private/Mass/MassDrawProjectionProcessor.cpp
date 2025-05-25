@@ -72,7 +72,6 @@ FORCEINLINE bool ProjectWorldToScreen(const FVector& WorldPosition, const FVecto
 }
 
 DECLARE_CYCLE_STAT(TEXT("MassDraw - ProjectionProcessor"), STAT_MassDrawProjectionProcessor, STATGROUP_MassDraw);
-UE_DISABLE_OPTIMIZATION
 void UMassDrawProjectionProcessor::Execute(FMassEntityManager& EntityManager, FMassExecutionContext& Context)
 {
 	SCOPE_CYCLE_COUNTER(STAT_MassDrawProjectionProcessor);
@@ -177,4 +176,3 @@ void UMassDrawProjectionProcessor::Execute(FMassEntityManager& EntityManager, FM
 		}
 	});
 }
-UE_ENABLE_OPTIMIZATION
